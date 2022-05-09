@@ -1,20 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <!-- Required meta tags -->
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-
-
-
-    <link rel="icon" href="Favicon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
     <title>Truck Service</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
@@ -40,7 +31,7 @@
       }
     </style>   
     <!-- Custom styles for this template -->
-    <link href="css\dashboard.css" rel="stylesheet">
+   <link href="css\dashboard.css" rel="stylesheet">
   </head>
   <body>
     
@@ -87,118 +78,91 @@
           </a>
     </nav>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Registro de Usuario</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+    <main>
+      <form action="" class="formulario" id="formulario"></form>
+        <!-- Grupo: Nombre -->
+        <div class="formulario__grupo" id="grupo__nombre">
+          <label for="nombre" class="formulario__label">Nombre</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Nombre cliente">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-            <span data-feather="calendar"></span>
-            Calendario
-          </button>
+          <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
         </div>
-      </div>
-</head>
-<body>
 
-<nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
-    <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </div>
-</nav>
-
-<main class="my-form">
-    <div class="cotainer">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">   </div>
-                        <div class="card-body">
-                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
-                                <div class="form-group row">
-                                    <label for="full_name" class="col-md-4 col-form-label text-md-right">Cliente</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="full_name" class="form-control" name="full-name">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">rut </label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="email_address" class="form-control" name="email-address">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">Dirección</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="user_name" class="form-control" name="username">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Numero Telefonico</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="phone_number" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Marca</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="present_address" class="col-md-4 col-form-label text-md-right">Modelo</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="present_address" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Chassis Corto</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Chassis Largo</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Tracción</label>
-                                    <div class="col-md-6">
-                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
-                                    </div>
-                                </div>
-
-                                    <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                        Registrar
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-            </div>
+        <!-- Grupo: Rut -->
+        <div class="formulario__grupo" id="grupo__rut">
+          <label for="nombre" class="formulario__label">Rut</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="12.456.775-5">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El Rut no es valido</p>
         </div>
-    </div>
 
-</main>
+        <!-- Grupo: Modelo -->
+        <div class="formulario__grupo" id="grupo__rut">
+          <label for="nombre" class="formulario__label">Modelo</label>
+          <div class="formulario__grupo-input">
+            <select name="modelo">
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</body>
-</html>
+              <option>TGS 28.350</option>
+              
+              <option>TGX 18.400</option>
+              
+              <option>TGA 26.420</option>
+              
+              </select>
+          </div>
+          <p class="formulario__input-error">Escoja un Modelo</p>
+        </div>
+
+        <!-- Grupo: Patente -->
+        <div class="formulario__grupo" id="grupo__patente">
+          <label for="telefono" class="formulario__label">Patente</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Patente">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">Ingrese una patente valida</p>
+        </div>
+
+        <!-- Grupo: Chasis corto -->
+        <div class="formulario__grupo" id="grupo__Chasis corto">
+          <label for="telefono" class="formulario__label">Chasis corto</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="Chasis">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El chasis es de maximo 9 digitos.</p>
+        </div>
+
+
+        <!-- Grupo: Teléfono -->
+        <div class="formulario__grupo" id="grupo__telefono">
+          <label for="telefono" class="formulario__label">Teléfono</label>
+          <div class="formulario__grupo-input">
+            <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="934671255">
+            <i class="formulario__validacion-estado fas fa-times-circle"></i>
+          </div>
+          <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 9 dígitos.</p>
+        </div>
+  
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+        </div>
+        <br>  
+        <div class="formulario__grupo formulario__grupo-btn-enviar">
+          <button type="submit" class="formulario__btn">Enviar</button>
+          <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+      </form>
+    </main>
+  
+      
+
+    <script src="js\bootstrap.min.js"></script>
+
+    </script><script src="js\dashboard.js"></script>
+  </body>
+</html> 
